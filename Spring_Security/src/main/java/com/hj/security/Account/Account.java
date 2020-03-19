@@ -26,5 +26,9 @@ public class Account {
 	private String password;
 	
 	private String role;
-	
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", email=" + email + ", password=" + password + ", role=" + role + "]";
+	}
 }

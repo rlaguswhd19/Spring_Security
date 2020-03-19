@@ -41,8 +41,6 @@ public class SampleController {
 	public String dashboard(Model model, Principal principal) {
 		String userEmail = principal.getName();
 		model.addAttribute("message", "Hello : " + userEmail);
-		AccountContext.setAccount(
-				accountRepository.findByEmail(userEmail).orElseThrow(() -> new UsernameNotFoundException(userEmail)));
 		sampleService.dashboard();
 		return "dashboard";
 	}

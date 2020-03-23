@@ -67,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.mvcMatchers("/user").hasRole("USER")
 				.anyRequest().authenticated()
 //				.accessDecisionManager(accessDecisionManager())
-				.expressionHandler(securityExpressionHandler());
+				.expressionHandler(expressionHandler());
 				;
 		
 		http.formLogin();
